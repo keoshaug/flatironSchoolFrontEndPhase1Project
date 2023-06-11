@@ -2,6 +2,23 @@ main {
     background-color: aquamarine;
 }
 
+* {
+    font-family: "Roboto";
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
 h1 {
-    background-color: red;
+    color: white;
+    font-size: 144px;
+    font-weight: 300;
 }
