@@ -8,7 +8,8 @@ const fetchData = () => {
     .then(data => getArtworks(data.objectIDs))
 
     function getArtworks(artData) {
-        console.log(artData)
+        artData.forEach((objectID) => {})
+        console.log(objectID)
    }
    
 }
