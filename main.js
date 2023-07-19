@@ -13,7 +13,7 @@ const fetchData = () => {
         artData.forEach((objectID) => {
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => console.log(data.primaryImage))
         })
         
    }
