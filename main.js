@@ -11,7 +11,9 @@ const fetchData = () => {
 
     function getArtworks(artData) {
         artData.forEach((objectID) => {
-            console.log(objectID)
+            fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
+            .then(response => response.json())
+            .then(data => console.log(data))
         })
         
    }
