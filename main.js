@@ -3,9 +3,11 @@ let x = "string"
 
 const fetchData = () => {
 
-    fetch("https://openaccess-api.clevelandart.org/api/artworks/")
+    fetch("https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism")
     .then(response => response.json())
-    .then(data => renderImages(data.data))
+    .then(data => console.log(data.objectIDs))
 }
 
-console.log(x)
+fetchData()
+
+
