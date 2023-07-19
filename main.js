@@ -1,5 +1,7 @@
-addEventListener("click", (event) => {})
-let x = "string"
+addEventListener("Seek", (event) => {});
+onsearch = (event) => {};
+
+
 
 const fetchData = () => {
 
@@ -8,6 +10,7 @@ const fetchData = () => {
     .then(data => getArtworks(data.objectIDs))
 
     function getArtworks(artData) {
+        let objectID = []
         artData.forEach((objectID) => {})
         console.log(objectID)
    }
