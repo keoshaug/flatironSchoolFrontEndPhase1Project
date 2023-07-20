@@ -9,12 +9,22 @@ const fetchData = () => {
     .then(response => response.json())
     .then(data => getArtworks(data.objectIDs))
 
+
     function getArtworks(artData) {
+        const cardContainer = document.getElementById("card-container")
+
         artData.forEach((objectID) => {
+            const img = document.createElement("img")
+            img.src = objectID.image
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
-            .then(data => console.log(data.primaryImage))
+            .then(objectID)
+
+
+            cardContainer.appendChild(img)
+            console.log(img)
         })
+
         
    }
    
