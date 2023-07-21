@@ -1,6 +1,11 @@
-addEventListener("Seek", (event) => {});
-onsearch = (event) => {};
+const input = document.getElementById("button");
+input.addEventListener('click', function() {
+  alert('I was clicked!');
+});
+console.log(input)
 
+
+const cardContainer = document.getElementById("card-container")
 
 
 const fetchData = () => {
@@ -13,11 +18,12 @@ const fetchData = () => {
     function getArtworks(artData) {
         artData.forEach((objectID) => {
             const img = document.createElement("img")
-            const cardContainer = document.getElementById("card-container")
-            img.src = objectID.image
+            img.src = objectID.primaryImage
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
-            .then(data => cardContainer.appendChild(img))
+            
+
+            cardContainer.appendChild(img)
             console.log(img)
         })     
    }
@@ -25,6 +31,3 @@ const fetchData = () => {
 }
 
 fetchData()
-
-
-
