@@ -11,21 +11,15 @@ const fetchData = () => {
 
 
     function getArtworks(artData) {
-        const cardContainer = document.getElementById("card-container")
-
         artData.forEach((objectID) => {
             const img = document.createElement("img")
+            const cardContainer = document.getElementById("card-container")
             img.src = objectID.image
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
-            .then(objectID)
-
-
-            cardContainer.appendChild(img)
+            .then(data => cardContainer.appendChild(img))
             console.log(img)
-        })
-
-        
+        })     
    }
    
 }
