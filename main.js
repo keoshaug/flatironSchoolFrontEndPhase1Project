@@ -1,6 +1,6 @@
 const input = document.getElementById("button");
-input.addEventListener('click', function() {
-  alert('I was clicked!');
+input.addEventListener("click", function() {
+  alert("This was clicked");
 });
 console.log(input)
 
@@ -18,13 +18,14 @@ const fetchData = () => {
     function getArtworks(artData) {
         artData.forEach((objectID) => {
             const img = document.createElement("img")
-            img.src = objectID.primaryImage
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
+            .then(data => (img.src = data.primaryImage))
+            
             
 
             cardContainer.appendChild(img)
-            console.log(img)
+            
         })     
    }
    
