@@ -2,7 +2,11 @@ const input = document.getElementById("button");
 input.addEventListener("click", function() {
   alert("This was clicked");
 });
-console.log(input)
+
+input.addEventListener("submit", (e) => {
+  e.preventDefault()
+  const data = Object.fromEntries(new FormData(e.target))
+})
 
 
 const cardContainer = document.getElementById("card-container")
