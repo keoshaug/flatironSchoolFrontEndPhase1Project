@@ -17,6 +17,9 @@ header {
 
 h1 {
     text-align: center;
+    display: flex;
+    position: absolute;
+    top: 0px;
 }
 
 .search-form {
