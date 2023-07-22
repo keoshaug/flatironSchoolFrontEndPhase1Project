@@ -38,6 +38,24 @@ const fetchData = () => {
             .then(response => response.json())
             .then(data => (img.src = data.primaryImage))
 
+            const card = document.createElement("div")
+            card.classList.add("card")
+
+            
+            const department = document.createElement("department")
+            department.textContent = objectID.department
+    
+            const title = document.createElement("title")
+            title.textContent = objectID.title
+
+            const artistDisplayName = document.createElement("artistDisplayName")
+            artistDisplayName.textContent = objectID.artistDisplayName
+
+            const objectDate = document.createElement("objectDate")
+            objectDate.textContent = objectID.objectDate
+
+            card.append(img, department, title, artistDisplayName, objectDate)
+
             cardContainer.appendChild(img)
             
         })     
