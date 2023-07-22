@@ -1,6 +1,6 @@
 const input = document.getElementById("button");
 input.addEventListener("click", function() {
-  alert("This was clicked");
+  alert("Cultivate curiosity");
 });
 
 input.addEventListener("submit", (e) => {
@@ -10,7 +10,6 @@ input.addEventListener("submit", (e) => {
 
 addEventListener("scroll", (e) => {
   e.preventDefault()
-  console.log("scroll")
 })
 
 onscroll = (e) => {};
@@ -40,7 +39,6 @@ const fetchData = () => {
             .then(data => (img.src = data.primaryImage))
 
             cardContainer.appendChild(img)
-            console.log(img)
             
         })     
    }
