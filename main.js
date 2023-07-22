@@ -3,7 +3,7 @@ input.addEventListener("click", function() {
   alert("Cultivate curiosity");
 });
 
-input.addEventListener("submit", (e) => {
+input.addEventListener("search", (e) => {
   e.preventDefault()
 })
 
@@ -30,9 +30,9 @@ const fetchData = () => {
             const img = document.createElement("img")
 
               if(img.style.height >= img.style.width) {
-                img.style.height = '200px'
+                img.style.height = '300px'
               } else {
-                img.style.width = '200px'
+                img.style.width = '300px'
               }
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
