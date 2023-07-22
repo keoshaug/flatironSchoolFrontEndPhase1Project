@@ -7,6 +7,14 @@ input.addEventListener("submit", (e) => {
   e.preventDefault()
 })
 
+
+addEventListener("scroll", (e) => {
+  e.preventDefault()
+  console.log("scroll")
+})
+
+onscroll = (e) => {};
+
 const API = "https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism"
 const cardContainer = document.getElementById("card-container")
 
