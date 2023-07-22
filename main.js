@@ -27,9 +27,6 @@ const fetchData = () => {
             .then(response => response.json())
             .then(data => (img.src = data.primaryImage))
 
-            
-
-
             cardContainer.appendChild(img)
             
         })     
