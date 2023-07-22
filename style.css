@@ -7,6 +7,12 @@ header {
     padding-right: 30%;
 }
 
+.search-wrapper {
+    flex-direction: column;
+}
+
+
+
 
 h1 {
     text-align: center;

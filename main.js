@@ -5,16 +5,15 @@ input.addEventListener("click", function() {
 
 input.addEventListener("submit", (e) => {
   e.preventDefault()
-  const data = Object.fromEntries(new FormData(e.target))
 })
 
-
+const API = "https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism"
 const cardContainer = document.getElementById("card-container")
 
 
 const fetchData = () => {
 
-    fetch("https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism")
+    fetch(API)
     .then(response => response.json())
     .then(data => getArtworks(data.objectIDs))
 
@@ -22,16 +21,18 @@ const fetchData = () => {
     function getArtworks(artData) {
         artData.forEach((objectID) => {
             const img = document.createElement("img")
-        if(img.style.height >= img.style.width) {
-          img.style.height = '200px'
-        } else {
-          img.style.width = '200px'
-        }
+
+              if(img.style.height >= img.style.width) {
+                img.style.height = '200px'
+              } else {
+                img.style.width = '200px'
+              }
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
             .then(data => (img.src = data.primaryImage))
 
             cardContainer.appendChild(img)
+            console.log(img)
             
         })     
    }
