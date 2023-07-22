@@ -18,11 +18,17 @@ const fetchData = () => {
     function getArtworks(artData) {
         artData.forEach((objectID) => {
             const img = document.createElement("img")
+        if(img.style.height >= img.style.width) {
+          img.style.height = '200px'
+        } else {
+          img.style.width = '200px'
+        }
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
             .then(data => (img.src = data.primaryImage))
+
             
-            
+
 
             cardContainer.appendChild(img)
             
