@@ -7,6 +7,7 @@ header {
     padding-right: 20%;
 }
 
+
 h1 {
     text-align: center;
     position: absolute;
@@ -14,6 +15,12 @@ h1 {
     padding-top: 30px;
     padding-left: 20%;
     padding-right: 20%;
+}
+
+.topOfPage {
+    background-color: grey;
+     background-size: cover;
+     height: 140px;
 }
 
 body {
@@ -30,5 +37,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 40px;
-    padding: 10px 10px 0px 10px;
+    padding-left: 30%;
+    padding-right: 30%;
+    color: aliceblue;
   }
