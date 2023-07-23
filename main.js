@@ -38,7 +38,7 @@ const fetchData = () => {
             .then(response => response.json())
             .then(data => (img.src = data.primaryImage))
 
-            const card = document.createElement("div")
+            const card = document.createElement("card")
             card.classList.add("card")
 
             
@@ -53,6 +53,8 @@ const fetchData = () => {
 
             const objectDate = document.createElement("objectDate")
             objectDate.textContent = objectID.objectDate
+
+            console.log(objectID)
 
             card.append(img, department, title, artistDisplayName, objectDate)
 
