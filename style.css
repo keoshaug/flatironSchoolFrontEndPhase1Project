@@ -1,18 +1,14 @@
-header {
-    text-align: center;
+
+
+.search-box {
     position: absolute;
-    top: 123px;
-    align-items: center;
-    padding-left: 35%;
-    padding-right: 30%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    border-radius: 35px;
+    padding: 5px;
 }
-
-.search-wrapper {
-    flex-direction: column;
-}
-
-
-
 
 h1 {
     text-align: center;
@@ -26,7 +22,7 @@ h1 {
 .topOfPage {
     background-color: grey;
      background-size: cover;
-     height: 160px;
+     height: 200px;
 }
 
 .midPage {
