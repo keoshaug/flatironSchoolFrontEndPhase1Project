@@ -11,8 +11,11 @@ The JavaScript contains 2 fetches, 3 event listeners, and a forEach. The 2 fetch
 
 I cleaned up the various elements with css. This helped in keeping the API images from rendering below (and not behind) my title and search bar at the top of the page. I created divs with the classes 'topOfPage' and 'midPage' with the latter holding the card container with the API images.
 
+## Roadmap
+In the future, I plan on making each of the images clickable and having this trigger a pop-up box with additional information come up at the center of the screen. 
 
-
+## Acknowledgment
+Thank you to the Metropolitan Museum of Art, specifically those who created the public API making their wonderful colletion more accessible to art lovers around the world. One can only hope that more art museums will follow suit and create their own public APIs!
 
 
 ## External Sites:
@@ -21,4 +24,7 @@ Metropolitan Museum Public API: https://collectionapi.metmuseum.org/public/colle
 
 Project Rubric: https://my.learn.co/courses/649/assignments/32803?module_item_id=82993
 Project Guidelines: https://my.learn.co/courses/649/pages/phase-1-project-guidelines?module_item_id=82990
+
+## License 
+GNU General Public License v3.0
 
