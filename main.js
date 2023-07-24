@@ -10,6 +10,7 @@ input.addEventListener("search", (e) => {
 
 addEventListener("scroll", (e) => {
   e.preventDefault()
+
 })
 
 onscroll = (e) => {};

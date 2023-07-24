@@ -22,6 +22,8 @@ Thank you to the Metropolitan Museum of Art, specifically those who created the 
 
 Metropolitan Museum Public API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism
 
+My YouTube Video Walkthrough: https://www.youtube.com/watch?v=k306zol097c
+
 Project Rubric: https://my.learn.co/courses/649/assignments/32803?module_item_id=82993
 Project Guidelines: https://my.learn.co/courses/649/pages/phase-1-project-guidelines?module_item_id=82990
 
