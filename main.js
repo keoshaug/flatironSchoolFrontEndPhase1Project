@@ -3,17 +3,19 @@ input.addEventListener("click", function() {
   alert("Cultivate curiosity");
 });
 
-const myScript = document.onsearch
-document.onsearch = function(){myScript}
-input.addEventListener("search", (myScript))
+
+addEventListener("search", (e) => {
+  e.preventDefault()
+  alert(`The term searched for was ${input.value}`)
+})
 
 
-addEventListener("scroll", (e) => {
+addEventListener("scroll", () => {
   
   alert("Not seeing what you're looking for? Try searching for it.");
 })
 
-onscroll = (e) => {};
+
 
 const API = "https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism"
 const cardContainer = document.getElementById("card-container")
