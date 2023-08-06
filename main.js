@@ -3,14 +3,15 @@ input.addEventListener("click", function() {
   alert("Cultivate curiosity");
 });
 
+
 input.addEventListener("search", (e) => {
   e.preventDefault()
 })
 
 
 addEventListener("scroll", (e) => {
-  e.preventDefault()
-
+  
+  alert("Not seeing what you're looking for? Try searching for it.");
 })
 
 onscroll = (e) => {};
