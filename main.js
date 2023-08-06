@@ -3,10 +3,9 @@ input.addEventListener("click", function() {
   alert("Cultivate curiosity");
 });
 
-
-input.addEventListener("search", (e) => {
-  e.preventDefault()
-})
+const myScript = document.onsearch
+document.onsearch = function(){myScript}
+input.addEventListener("search", (myScript))
 
 
 addEventListener("scroll", (e) => {
