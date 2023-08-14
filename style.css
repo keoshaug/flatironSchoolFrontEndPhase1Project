@@ -2,7 +2,7 @@
 
 .search-box {
     position: absolute;
-    top: 10%;
+    top: 4%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 40px;
@@ -31,12 +31,18 @@ h1 {
 }
 
 body {
-
+    height: 4000px;
     align-items: center;
     background-color: aqua;
     position: relative;
     margin: auto;
 }
+
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+  }
 
 
 footer {
