@@ -10,10 +10,9 @@ addEventListener("search", (e) => {
 })
 
 
-// addEventListener("scroll", () => {
-  
-//   alert("Not seeing what you're looking for? Try searching for it.");
-// })
+ addEventListener("scroll", () => {
+
+ })
 
 
 
