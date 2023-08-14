@@ -17,17 +17,12 @@ addEventListener("search", (e) => {
 
 const backToTopButton = document.querySelector(".back-to-top")
 
-const scrollContainer = () => {
-  return document.documentElement || document.body;
-};
 
-
-
- const goToTop = () => {
+ const returnToTop = () => {
   document.body.scrollIntoView();
 };
 
-backToTopButton.addEventListener("click", goToTop)
+backToTopButton.addEventListener("click", returnToTop)
 
 
 
