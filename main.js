@@ -1,9 +1,3 @@
-// const input = document.getElementById("button");
-// input.addEventListener("click", function() {
-//   alert("Cultivate curiosity");
-// });
-
-
 addEventListener("submit", (e) => {
   e.preventDefault()
   // alert(`The term searched for was ${input.value}`)
@@ -12,12 +6,11 @@ addEventListener("submit", (e) => {
 
 addEventListener("mouseover", (e) => {
 
-onmouseover = (e) => {}
 })
 
 
- addEventListener("scroll", (e) => {
-    console.log(e.target.scrollTop)
+addEventListener("scroll", (e) => {
+    
  })
 
 
