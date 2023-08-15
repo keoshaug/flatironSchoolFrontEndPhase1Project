@@ -4,9 +4,9 @@ addEventListener("submit", (e) => {
   console.log(e.target[0].value)
 })
 
-addEventListener("mouseover", (e) => {
-
-})
+addEventListener("click", function() {
+  backToTopButton.style.backgroundColor="red"
+}, true)
 
 
 addEventListener("scroll", (e) => {
