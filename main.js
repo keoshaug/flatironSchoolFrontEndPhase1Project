@@ -1,12 +1,18 @@
-const input = document.getElementById("button");
-input.addEventListener("click", function() {
-  alert("Cultivate curiosity");
-});
+// const input = document.getElementById("button");
+// input.addEventListener("click", function() {
+//   alert("Cultivate curiosity");
+// });
 
 
-addEventListener("search", (e) => {
+addEventListener("submit", (e) => {
   e.preventDefault()
-  alert(`The term searched for was ${input.value}`)
+  // alert(`The term searched for was ${input.value}`)
+  console.log(e.target[0].value)
+})
+
+addEventListener("mouseover", (e) => {
+
+onmouseover = (e) => {}
 })
 
 
@@ -35,6 +41,7 @@ const fetchData = () => {
     fetch(API)
     .then(response => response.json())
     .then(data => getArtworks(data.objectIDs))
+    
 
 
     function getArtworks(artData) {
@@ -48,7 +55,7 @@ const fetchData = () => {
               }
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
-            .then(data => (img.src = data.primaryImage))
+            .then(data => console.log(data))
 
             const card = document.createElement("card")
             card.classList.add("card")
@@ -66,7 +73,7 @@ const fetchData = () => {
             const objectDate = document.createElement("objectDate")
             objectDate.textContent = objectID.objectDate
 
-            console.log(objectID)
+          
 
             card.append(img, department, title, artistDisplayName, objectDate)
 
