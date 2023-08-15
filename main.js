@@ -48,7 +48,7 @@ const fetchData = () => {
               }
             fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => (img.src = data.primaryImage))
 
             const card = document.createElement("card")
             card.classList.add("card")
