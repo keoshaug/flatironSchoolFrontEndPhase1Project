@@ -33,37 +33,41 @@ const API = "https://collectionapi.metmuseum.org/public/collection/v1/search?isH
 const cardContainer = document.getElementById("card-container")
 
 
-const getArtworks = (dataArray) => {
-  console.log(dataArray)
-}
 
 
+
+function fetchData () {
+ 
 
 fetch(API)
 .then(response => response.json())
 .then(data => getArtworks(data.objectIDs))
 
-    
+const getArtworks = (dataArray) => {
+  dataArray.forEach(objectID => {
+    console.log(dataArray)
+  })
+}
+  const img = document.createElement("img")
+  const objectID = function getArtwork(artData) {
+  artData.forEach((objectID) => {
 
-  //   function getArtworks(artData) {
-  //       artData.forEach((objectID) => {
-  //           const img = document.createElement("img")
+  fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
+            .then(response => response.json())
+            .then(data => data(img.src = data.primaryImage))
 
-  //             if(img.style.height >= img.style.width) {
-  //               img.style.height = '300px'
-  //             } else {
-  //               img.style.width = '300px'
-  //             }
-  //           fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
-  //           .then(response => response.json())
-  //           .then(data => (img.src = data.primaryImage))
+              if(img.style.height >= img.style.width) {
+                img.style.height = '300px'
+              } else {
+                img.style.width = '300px'
+              }
             
 
             
-  //       })     
-  //  }
-   
+        })     
+   }
+}
 
 
-// fetchData()
+fetchData()
 
