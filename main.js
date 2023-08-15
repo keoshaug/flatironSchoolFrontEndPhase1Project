@@ -4,10 +4,6 @@ addEventListener("submit", (e) => {
   console.log(e.target[0].value)
 })
 
-addEventListener("click", function() {
-  backToTopButton.style.backgroundColor="red"
-}, true)
-
 
 addEventListener("scroll", (e) => {
     
@@ -15,6 +11,9 @@ addEventListener("scroll", (e) => {
 
 
 const backToTopButton = document.querySelector(".back-to-top")
+backToTopButton.addEventListener("click", function() {
+  backToTopButton.style.backgroundColor="red"
+}, true)
 
 
  const returnToTop = () => {
