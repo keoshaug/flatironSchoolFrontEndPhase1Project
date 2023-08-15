@@ -1,7 +1,5 @@
 addEventListener("submit", (e) => {
   e.preventDefault()
-  // alert(`The term searched for was ${input.value}`)
-  console.log(e.target[0].value)
 })
 
 
@@ -21,6 +19,14 @@ backToTopButton.addEventListener("click", function() {
 };
 
 backToTopButton.addEventListener("click", returnToTop)
+
+
+document.querySelector("search").addEventListener("input", filterData)
+
+function filterData () {
+  const searchInput = document.querySelector('#search')
+  const filter = searchInput.value()
+}
 
 
 
