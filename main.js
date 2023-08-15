@@ -30,7 +30,7 @@ const API = "https://collectionapi.metmuseum.org/public/collection/v1/search?isH
 const cardContainer = document.getElementById("card-container")
 
 
-const fetchData = async () => {
+const fetchData = () => {
 
     fetch(API)
     .then(response => response.json())
@@ -78,10 +78,5 @@ const fetchData = async () => {
    
 }
 
-const getArtworks = data.objectIDs
-const displayArtistInfo = async () => {
-  const payload = await getArtworks()
-  console.log(payload)
-}
+fetchData()
 
-displayArtistInfo()
