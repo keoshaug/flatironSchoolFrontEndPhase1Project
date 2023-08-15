@@ -1,9 +1,12 @@
+const displayData = document.querySelector("#display-data")
+
+
 addEventListener("submit", (e) => {
   e.preventDefault()
 })
 
 
-addEventListener("scroll", (e) => {
+addEventListener("scroll", (e) => { 
     
  })
 
@@ -21,20 +24,13 @@ backToTopButton.addEventListener("click", function() {
 backToTopButton.addEventListener("click", returnToTop)
 
 
-document.querySelector("search").addEventListener("input", filterData)
-
-function filterData () {
-  const searchInput = document.querySelector('#search')
-  const filter = searchInput.value()
-}
-
 
 
 const API = "https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=impressionism"
 const cardContainer = document.getElementById("card-container")
 
 
-const fetchData = () => {
+const fetchData = async () => {
 
     fetch(API)
     .then(response => response.json())
@@ -82,7 +78,10 @@ const fetchData = () => {
    
 }
 
-fetchData()
+const getArtworks = data.objectIDs
+const displayArtistInfo = async () => {
+  const payload = await getArtworks()
+  console.log(payload)
+}
 
-
-
+displayArtistInfo()
