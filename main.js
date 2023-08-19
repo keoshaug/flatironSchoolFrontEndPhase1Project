@@ -9,6 +9,7 @@ const displayData = document.querySelector("#display-data")
 // })
 
 
+
 addEventListener("scroll", (e) => { 
     
  })
@@ -18,6 +19,11 @@ const backToTopButton = document.querySelector(".back-to-top")
 backToTopButton.addEventListener("click", function() {
   backToTopButton.style.backgroundColor="red"
 }, true)
+
+backToTopButton.addEventListener("dblclick", (e) => { 
+  alert("I was double clicked");
+    
+})
 
 
  const returnToTop = () => {
