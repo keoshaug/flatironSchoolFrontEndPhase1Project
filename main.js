@@ -1,12 +1,12 @@
 
 
 const displayData = document.querySelector("#display-data")
-const searchbar = document.getElementById("searchbar")
+// const searchbar = document.getElementById("searchbar")
 
 
-addEventListener("submit", (e) => {
-  e.preventDefault()
-})
+// addEventListener("submit", (e) => {
+//   e.preventDefault()
+// })
 
 
 addEventListener("scroll", (e) => { 
