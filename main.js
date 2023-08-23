@@ -49,40 +49,33 @@ function fetchData () {
 
   function getArtworks(artData) {
       artData.forEach((objectID) => {
-          const img = document.createElement("img")
-
-            if(img.style.height >= img.style.width) {
-              img.style.height = '300px'
-            } else {
-              img.style.width = '300px'
-            }
-          fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`)
-          .then(response => response.json())
-          .then(data => (img.src = data.primaryImage))
-
-          const card = document.createElement("card")
-          card.classList.add("card")
-
-          
-          const department = document.createElement("department")
-          department.textContent = objectID.department
+        fetch(
+          `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            const img = document.createElement("img");
+            const card = document.createElement("div");
+            card.classList.add("card");
+            img.src = data.primaryImage;
   
-          const title = document.createElement("title")
-          title.textContent = objectID.title
+            img.style.height = "300px";
+  
+            img.style.width = "300px";
+  
+            card.append(img)
+            const container = document.getElementById("card-container")
+            container.append(card)
 
-          const artistDisplayName = document.createElement("artistDisplayName")
-          artistDisplayName.textContent = objectID.artistDisplayName
 
-          const objectDate = document.createElement("objectDate")
-          objectDate.textContent = objectID.objectDate
+            const title = data.title
+            const artist = data.artistAlphaSort
 
-        
-
-          card.append(img, department, title, artistDisplayName, objectDate)
-
-          cardContainer.appendChild(img)
-          
-      })     
+            img.addEventListener("mouseover", (e) => { 
+              message(title, artist)
+                
+            })
+      })})     
  }
  
 }
