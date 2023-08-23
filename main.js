@@ -72,8 +72,8 @@ function fetchData () {
             const artist = data.artistAlphaSort
 
             img.addEventListener("mouseover", (e) => { 
-              message(title, artist)
-                
+              text = (title, artist)
+              console.log(text)
             })
       })})     
  }
