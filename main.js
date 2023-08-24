@@ -75,9 +75,7 @@ function fetchData () {
 
             img.addEventListener("mouseover", (e) => { 
 
-              console.log(title, artist)
-              
-              
+              alert([title, artist])
             }
             )
             
