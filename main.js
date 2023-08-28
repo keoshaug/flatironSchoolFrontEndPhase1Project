@@ -67,23 +67,23 @@ function fetchData () {
             const container = document.getElementById("card-container")
             container.append(card)
 
-
             const title = document.createElement("h1")
             title.textContent = data.title
-            console.log(title)
+ 
             const artist = document.createElement("h3")
-            artist.textContent = data.artistAlphaSort
-            console.log(artist)
-            
-
+            artist.textContent = data.artistAlphaSort            
 
             img.addEventListener("mouseover", (e) => { 
             card.append(title, artist)
-            },)
+            },) 
+
+            img.addEventListener("mouseout", (e) => { 
+              card.removeChild(title)
+              card.removeChild(artist)
+              },) 
+            
 
 
-            
-            
       })})     
  }
  
