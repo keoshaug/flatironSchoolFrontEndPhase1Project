@@ -68,16 +68,21 @@ function fetchData () {
             container.append(card)
 
 
-            const title = data.title
-
-            const artist = data.artistAlphaSort
+            const title = document.createElement("h1")
+            title.textContent = data.title
+            console.log(title)
+            const artist = document.createElement("h3")
+            artist.textContent = data.artistAlphaSort
+            console.log(artist)
+            
 
 
             img.addEventListener("mouseover", (e) => { 
+            card.append(title, artist)
+            },)
 
-              alert([title, artist])
-            }
-            )
+
+            
             
       })})     
  }
